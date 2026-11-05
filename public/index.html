@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grounded — Not Just Coffee, Culture | Harare, Zimbabwe</title>
+<meta name="description" content="Grounded is Harare's container café in Milton Park. Specialty coffee, food, and good vibes. Halaal certified. 22 Van Praagh, Cnr Prince Edward.">
+<link rel="canonical" href="https://grounded.co.zw/">
+<meta name="theme-color" content="#1A3A2A">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="apple-touch-icon" href="/images/favicon-160.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Grounded">
+<meta property="og:title" content="Grounded — Not Just Coffee, Culture">
+<meta property="og:description" content="Specialty coffee, fresh food and a garden under the trees in Milton Park, Harare. 100% Halaal certified.">
+<meta property="og:url" content="https://grounded.co.zw/">
+<meta property="og:image" content="https://grounded.co.zw/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Grounded",
+  "url": "https://grounded.co.zw/",
+  "image": "https://grounded.co.zw/images/og.jpg",
+  "logo": "https://grounded.co.zw/images/logo.webp",
+  "description": "Container café in Milton Park, Harare serving specialty coffee and freshly made food. All products Halaal certified by Jamiat Halaal Zimbabwe.",
+  "servesCuisine": ["Coffee", "Halaal"],
+  "priceRange": "$",
+  "telephone": "+263779299630",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "22 Van Praagh Avenue, Cnr Prince Edward Street, Milton Park",
+    "addressLocality": "Harare",
+    "addressCountry": "ZW"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "13:00"}
+  ],
+  "sameAs": ["https://instagram.com/grounded.zw"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="/images/exterior.webp">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green:      #1A3A2A;
+    --green-mid:  #2D5A40;
+    --green-light:#3A7054;
+    --gold:       #C8920A;
+    --gold-light: #E5A812;
+    --cream:      #F7F3EC;
+    --warm-white: #FDFAF5;
+    --charcoal:   #1C1C1C;
+    --muted:      #5A5A5A;
+    --border:     #DDD8CF;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--warm-white);
+    color: var(--charcoal);
+    line-height: 1.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: center;
+    padding: 0 5vw;
+    height: 68px;
+    background: rgba(26,58,42,0.97);
+    backdrop-filter: blur(8px);
+  }
+  .nav-logo {
+    text-decoration: none;
+    display: flex; align-items: center;
+  }
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex; align-items: flex-end;
+    padding: 0 5vw 8vh;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('/images/exterior.webp');
+    background-size: cover;
+    background-position: center 40%;
+    transform: scale(1.03);
+    transition: transform 8s ease;
+  }
+  .hero:hover .hero-bg { transform: scale(1); }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(10,25,15,0.92) 0%,
+      rgba(10,25,15,0.5) 45%,
+      rgba(10,25,15,0.15) 100%
+    );
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 680px;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--gold);
+    padding-left: 0.75rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 900;
+    line-height: 0.95;
+    color: #fff;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero-tagline {
+    font-size: 1.05rem; font-weight: 300;
+    color: rgba(255,255,255,0.82);
+    margin-bottom: 2rem;
+    max-width: 480px;
+    line-height: 1.7;
+  }
+  .hero-cta {
+    display: inline-flex; gap: 1rem; flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 0.85rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.25s;
+  }
+  .btn-gold {
+    background: var(--gold); color: var(--green);
+  }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    border: 1.5px solid rgba(255,255,255,0.5);
+    color: #fff;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-badges {
+    position: absolute; top: 50%; right: 5vw;
+    transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 0.75rem;
+    z-index: 2;
+  }
+  .badge {
+    background: rgba(26,58,42,0.88);
+    border: 1px solid rgba(200,146,10,0.4);
+    color: var(--gold);
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.5rem 0.9rem;
+    text-align: center;
+    backdrop-filter: blur(4px);
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 5vw; }
+  .section-label {
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+  h2.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--green);
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── ABOUT ── */
+  .about { background: var(--green); }
+  .about-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+    align-items: center;
+  }
+  .about .section-label { color: var(--gold-light); }
+  .about h2.section-title { color: #fff; }
+  .about-body {
+    font-size: 1rem; font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.85;
+  }
+  .about-body p + p { margin-top: 1.25rem; }
+  .about-body strong { color: var(--gold-light); font-weight: 500; }
+  .about-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
+  }
+  .about-imgs img {
+    width: 100%; height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  .about-imgs img:first-child {
+    grid-column: 1 / -1;
+    height: 280px;
+  }
+
+  /* ── GALLERY ── */
+  .gallery { background: var(--cream); }
+  .gallery-inner { max-width: 1200px; margin: 0 auto; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 260px 260px;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+  .gallery-grid img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .gallery-item { overflow: hidden; }
+  .gallery-item:hover img { transform: scale(1.04); }
+  .gallery-item:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  /* ── VISIT ── */
+  .visit { background: var(--green); }
+  .visit-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    align-items: start;
+  }
+  .visit .section-label { color: var(--gold-light); }
+  .visit h2.section-title { color: #fff; }
+  .visit-details { display: flex; flex-direction: column; gap: 2rem; }
+  .visit-item { display: flex; gap: 1rem; align-items: flex-start; }
+  .visit-icon {
+    width: 42px; height: 42px; flex-shrink: 0;
+    background: rgba(200,146,10,0.15);
+    border: 1px solid rgba(200,146,10,0.35);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+  .visit-item-text h4 {
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.35rem;
+  }
+  .visit-item-text p {
+    font-size: 0.95rem; font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+  }
+  .visit-map {
+    width: 100%; aspect-ratio: 4/3;
+    border: 1px solid rgba(200,146,10,0.3);
+    overflow: hidden;
+  }
+  .visit-map iframe {
+    width: 100%; height: 100%; border: none; display: block;
+  }
+  .social-strip {
+    margin-top: 2rem;
+    display: flex; gap: 1rem; align-items: center;
+  }
+  .social-link {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+  .social-link:hover { color: var(--gold-light); }
+  .social-link svg { width: 18px; height: 18px; fill: currentColor; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0D1F14;
+    padding: 2rem 5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  footer p {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.8rem;
+  }
+  .footer-logo { display: flex; align-items: center; }
+
+  /* ── HALAAL BANNER ── */
+  .halaal-bar {
+    background: var(--gold);
+    padding: 0.65rem 5vw;
+    text-align: center;
+  }
+  .halaal-bar p {
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--green);
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .hero-badges { display: none; }
+    .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-imgs img:first-child { height: 220px; }
+    .gallery-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+    .gallery-item:first-child { grid-column: 1 / -1; }
+    .visit-inner { grid-template-columns: 1fr; gap: 2rem; }
+    footer { flex-direction: column; text-align: center; }
+  }
+
+  /* ── v2 additions ── */
+  .menu-section { background: var(--warm-white); }
+  .menu-inner { max-width: 1100px; margin: 0 auto; }
+  .hero { padding-top: 100px; }
+  .hero-logo { height:150px; width:auto; margin-bottom:1.25rem; display:block; }
+  .open-status { display:inline-block; margin-top:1.25rem; font-size:0.8rem; font-weight:600;
+    letter-spacing:0.08em; text-transform:uppercase; color:#fff; padding:0.35rem 0.8rem;
+    border:1px solid rgba(255,255,255,0.35); }
+  .open-status::before { content:""; display:inline-block; width:8px; height:8px; border-radius:50%; background:#999; margin-right:0.5rem; }
+  .open-status.open::before { background:#5ad17a; }
+  .open-status.closed::before { background:#e0674f; }
+  .open-status:empty { display:none; }
+  .menu-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem 4rem; margin-top:2.5rem; }
+  .menu-group { margin-bottom:2.25rem; }
+  .menu-group h3 { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--green);
+    border-bottom:2px solid var(--gold); padding-bottom:0.4rem; margin-bottom:0.75rem; }
+  .menu-cols { display:flex; justify-content:flex-end; font-size:0.7rem; font-weight:600;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:0.25rem; }
+  .menu-cols span, .price-pair span { width:3.4rem; text-align:right; }
+  .menu-item { display:flex; justify-content:space-between; gap:1rem; padding:0.6rem 0; border-bottom:1px dotted var(--border); }
+  .menu-item .name { font-weight:600; color:var(--green); }
+  .menu-item .desc { font-size:0.85rem; color:var(--muted); font-weight:300; margin-top:0.1rem; }
+  .price-pair { display:flex; flex-shrink:0; font-variant-numeric:tabular-nums; font-weight:500; }
+  .menu-note { margin-top:1rem; font-size:0.85rem; color:var(--muted); font-style:italic; text-align:center; }
+  .dir-link { display:inline-block; margin-top:0.5rem; color:var(--gold-light); font-size:0.85rem;
+    font-weight:600; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; }
+  .dir-link:hover { text-decoration:underline; }
+  .visit-icon svg { width:20px; height:20px; stroke:var(--gold); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+  a:focus-visible { outline:2px solid var(--gold-light); outline-offset:3px; }
+  @media (prefers-reduced-motion: reduce) { html{scroll-behavior:auto;} .hero-bg{transition:none;} }
+  @media (max-width: 768px) {
+    .menu-grid { grid-template-columns:1fr; gap:0; }
+    .hero-logo { height:100px; }
+    .nav-links { gap:1.1rem; }
+    .nav-links a { font-size:0.72rem; letter-spacing:0.05em; }
+    .hero { padding-bottom:6vh; }
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <ul class="nav-links">
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#visit">Find Us</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img class="hero-logo" src="/images/logo.webp" alt="Grounded" width="150" height="150">
+    <div class="hero-eyebrow">Milton Park, Harare</div>
+    <h1>NOT JUST<br>COFFEE —<br><span>CULTURE.</span></h1>
+    <p class="hero-tagline">A 40-foot container. A Wega espresso machine. Specialty coffee, freshly made food, and a space where Harare comes to be itself.</p>
+    <div class="hero-cta">
+      <a href="#menu" class="btn btn-gold">View Our Menu</a>
+      <a href="#visit" class="btn btn-outline">Find Us</a>
+      <a href="https://wa.me/263779299630?text=Hi%20Grounded%2C%20" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+    <div><span class="open-status" id="open-status" aria-live="polite"></span></div>
+  </div>
+  <div class="hero-badges">
+    <div class="badge">☽ Halaal<br>Certified</div>
+  </div>
+</header>
+
+<div class="halaal-bar">
+  <p>Proudly Halaal Certified by Jamiat Halaal Zimbabwe &nbsp;·&nbsp; All products 100% Halaal</p>
+</div>
+
+<main>
+<section class="about" id="about">
+  <div class="about-inner">
+    <div>
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">Where Harare comes to slow down.</h2>
+      <div class="about-body">
+        <p>Grounded was born from a simple conviction: that <strong>great coffee deserves a great setting</strong>. We took a shipping container, filled it with warmth, timber, rope pendant lights and professional coffee equipment, and tucked it under the trees at 22 Van Praagh in Milton Park.</p>
+        <p>We opened in January 2026 with a full espresso bar, a food menu built around freshly made samoosas, scones, pies, toasties and wors rolls, and a seating garden framed by murals. We didn't want to build another takeaway counter. We wanted to build <strong>somewhere worth going to</strong>.</p>
+        <p>Everything at Grounded is <strong>Halaal certified</strong> through Jamiat Halaal Zimbabwe, our personal commitment to quality, integrity and inclusivity. If you're here for the coffee, the chai latte, or just a quiet corner with good vibes, you're exactly who we built this for.</p>
+      </div>
+    </div>
+    <div class="about-imgs">
+      <img src="/images/interior-bar.webp" alt="Grounded interior — the bar and Wega Pegaso" width="1000" height="750" loading="lazy">
+      <img src="/images/bar.webp" alt="Grounded container bar interior" width="1000" height="750" loading="lazy">
+      <img src="/images/garden.webp" alt="Grounded seating garden and murals" width="1200" height="900" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="gallery-inner">
+    <div class="section-label">The Space</div>
+    <h2 class="section-title">Come see us.</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="/images/exterior.webp" alt="Grounded container café exterior, Milton Park Harare" width="1200" height="900" loading="lazy"></div>
+      <div class="gallery-item"><img src="/images/exterior-2.webp" alt="Grounded exterior view" width="1200" height="900" loading="lazy"></div>
+      <div class="gallery-item"><img src="/images/garden.webp" alt="Grounded seating area" width="1200" height="900" loading="lazy"></div>
+      <div class="gallery-item"><img src="/images/bar.webp" alt="Grounded mural garden" width="1000" height="750" loading="lazy"></div>
+      <div class="gallery-item"><img src="/images/interior-bar.webp" alt="Grounded interior bar" width="1000" height="750" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="menu">
+  <div class="menu-inner">
+    <div class="section-label">What We Serve</div>
+    <h2 class="section-title">The Menu.</h2>
+    <div class="menu-grid"><div><div class="menu-group"><h3>Hot Coffee</h3><div class="menu-cols"><span>S</span><span>R</span></div><div class="menu-item"><div><div class="name">Cappuccino</div><div class="desc">Equal parts espresso, steamed milk and foam for a rich, frothy texture.</div></div><div class="price-pair"><span>2.00</span><span>3.00</span></div></div><div class="menu-item"><div><div class="name">Coffee</div><div class="desc">A classic, strong cup of black coffee made from freshly ground beans.</div></div><div class="price-pair"><span>2.00</span><span>3.00</span></div></div><div class="menu-item"><div><div class="name">Latte</div><div class="desc">Espresso combined with steamed milk and topped with a small amount of foam.</div></div><div class="price-pair"><span>2.00</span><span>3.00</span></div></div><div class="menu-item"><div><div class="name">Cortado</div><div class="desc">Espresso with equal parts warm, steamed milk.</div></div><div class="price-pair"><span>2.00</span><span></span></div></div><div class="menu-item"><div><div class="name">Americano</div><div class="desc">Hot water added to a shot of espresso for a lighter, yet bold coffee.</div></div><div class="price-pair"><span>2.00</span><span>3.00</span></div></div></div><div class="menu-group"><h3>Not Coffee</h3><div class="menu-cols"><span>S</span><span>R</span></div><div class="menu-item"><div><div class="name">Hot Tea</div><div class="desc">Five Roses, Tanganda or Rooibos.</div></div><div class="price-pair"><span>2.00</span><span>3.00</span></div></div><div class="menu-item"><div><div class="name">Hot Choc</div><div class="desc">Rich and creamy hot chocolate.</div></div><div class="price-pair"><span>2.00</span><span>3.00</span></div></div><div class="menu-item"><div><div class="name">Matcha Latte</div><div class="desc">Finely ground Japanese green tea powder, served over milk of choice. Iced or hot.</div></div><div class="price-pair"><span></span><span>5.00</span></div></div><div class="menu-item"><div><div class="name">Chai Latte</div><div class="desc">Spiced tea latte made with steamed milk and chai spice concentrate.</div></div><div class="price-pair"><span>3.00</span><span>5.00</span></div></div><div class="menu-item"><div><div class="name">Dirty Chai</div><div class="desc">A shot of espresso added to a traditional chai latte.</div></div><div class="price-pair"><span>4.00</span><span>5.00</span></div></div><div class="menu-item"><div><div class="name">Mochaccino</div><div class="desc">A shot of espresso with steamed milk and chocolate (syrup or cocoa powder).</div></div><div class="price-pair"><span>3.00</span><span>4.00</span></div></div></div><div class="menu-group"><h3>Food</h3><div class="menu-item"><div><div class="name">Scones</div></div><div class="price-pair"><span>0.50</span></div></div><div class="menu-item"><div><div class="name">Samoosas</div><div class="desc">Chicken mince, beef mince or cheese.</div></div><div class="price-pair"><span>0.50</span></div></div><div class="menu-item"><div><div class="name">Carrot Cake</div></div><div class="price-pair"><span>3.00</span></div></div><div class="menu-item"><div><div class="name">Pies</div><div class="desc">Chicken, pepper steak or BBQ steak.</div></div><div class="price-pair"><span>3.00</span></div></div><div class="menu-item"><div><div class="name">Wors Roll</div></div><div class="price-pair"><span>3.00</span></div></div><div class="menu-item"><div><div class="name">Russian Roll</div></div><div class="price-pair"><span>2.00</span></div></div><div class="menu-item"><div><div class="name">Chips (S)</div></div><div class="price-pair"><span>1.00</span></div></div><div class="menu-item"><div><div class="name">Toasted Sandwich: Spicy Chicken Mayo</div></div><div class="price-pair"><span>3.00</span></div></div><div class="menu-item"><div><div class="name">Toasted Sandwich: Cheese &amp; Tomato</div></div><div class="price-pair"><span>2.00</span></div></div></div></div><div><div class="menu-group"><h3>Cold Coffee</h3><div class="menu-cols"><span>R</span><span>L</span></div><div class="menu-item"><div><div class="name">Iced Coffee</div><div class="desc">Chilled black coffee served over ice cubes.</div></div><div class="price-pair"><span>3.00</span><span>5.00</span></div></div><div class="menu-item"><div><div class="name">Iced Latte</div><div class="desc">Espresso and cold milk over ice.</div></div><div class="price-pair"><span>3.00</span><span>5.00</span></div></div><div class="menu-item"><div><div class="name">Iced Chai Latte</div><div class="desc">Spiced tea mixed with cold milk and chai concentrate.</div></div><div class="price-pair"><span>3.00</span><span>5.00</span></div></div></div><div class="menu-group"><h3>Milkshakes</h3><div class="menu-cols"><span>R</span><span>L</span></div><div class="menu-item"><div><div class="name">Milkshake</div><div class="desc">Strawberry, chocolate, banana, lime, coffee, hazelnut, vanilla or bubblegum.</div></div><div class="price-pair"><span>4.00</span><span>5.00</span></div></div></div><div class="menu-group"><h3>Extras &amp; Cold Drinks</h3><div class="menu-item"><div><div class="name">Flavoured Syrup</div><div class="desc">Hazelnut, vanilla, caramel or salted caramel.</div></div><div class="price-pair"><span>+1.00</span></div></div><div class="menu-item"><div><div class="name">Almond Milk</div></div><div class="price-pair"><span>+1.00</span></div></div><div class="menu-item"><div><div class="name">Soft Drinks</div></div><div class="price-pair"><span>1.00</span></div></div><div class="menu-item"><div><div class="name">Energade</div></div><div class="price-pair"><span>1.50</span></div></div><div class="menu-item"><div><div class="name">Red Bull</div></div><div class="price-pair"><span>1.50</span></div></div></div></div></div>
+    <p class="menu-note">All prices in USD &nbsp;·&nbsp; Hot drinks: S 250ml | R 350ml &nbsp;·&nbsp; Iced drinks &amp; milkshakes: R 350ml | L 500ml</p>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="visit-inner">
+    <div>
+      <div class="section-label">Find Us</div>
+      <h2 class="section-title">Come get Grounded.</h2>
+      <div class="visit-details">
+        <div class="visit-item">
+          <div class="visit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+          <div class="visit-item-text">
+            <h4>Location</h4>
+            <p>22 Van Praagh Avenue<br>Corner Prince Edward Street<br>Milton Park, Harare, Zimbabwe</p>
+            <a class="dir-link" href="https://www.google.com/maps/dir/?api=1&destination=22+Van+Praagh+Avenue+Milton+Park+Harare+Zimbabwe" target="_blank" rel="noopener">Get directions →</a>
+          </div>
+        </div>
+        <div class="visit-item">
+          <div class="visit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div class="visit-item-text">
+            <h4>Hours</h4>
+            <p>Monday – Friday: 8:00am – 5:00pm<br>Saturday: 8:00am – 1:00pm<br>Sunday: Closed</p>
+          </div>
+        </div>
+        <div class="visit-item">
+          <div class="visit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg></div>
+          <div class="visit-item-text">
+            <h4>Contact</h4>
+            <p><a class="dir-link" style="margin-top:0" href="https://wa.me/263779299630?text=Hi%20Grounded%2C%20" target="_blank" rel="noopener">WhatsApp +263 77 929 9630 →</a><br>Instagram: @grounded.zw</p>
+          </div>
+        </div>
+      </div>
+      <div class="social-strip">
+        <a href="https://instagram.com/grounded.zw" target="_blank" rel="noopener" class="social-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @grounded.zw
+        </a>
+      </div>
+    </div>
+    <div class="visit-map">
+      <iframe src="https://maps.google.com/maps?q=22+Van+Praagh+Avenue+Milton+Park+Harare+Zimbabwe&amp;z=16&amp;output=embed"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Grounded location — 22 Van Praagh, Milton Park, Harare"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-logo"><img src="/images/favicon-160.png" alt="Grounded" width="52" height="52" style="height:52px;width:auto;"></div>
+  <p>© 2026 Grounded. 22 Van Praagh, Milton Park, Harare, Zimbabwe.</p>
+  <p style="color:rgba(200,146,10,0.6); font-size:0.75rem;">NOT JUST COFFEE — CULTURE</p>
+</footer>
+
+<script>
+(function () {
+  var el = document.getElementById('open-status');
+  if (!el) return;
+  try {
+    var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Africa/Harare', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false }).formatToParts(new Date());
+    var get = function (t) { return parts.filter(function (p) { return p.type === t; })[0].value; };
+    var day = get('weekday'), mins = parseInt(get('hour'), 10) * 60 + parseInt(get('minute'), 10);
+    var close = ['Mon','Tue','Wed','Thu','Fri'].indexOf(day) > -1 ? 17 * 60 : day === 'Sat' ? 13 * 60 : 0;
+    var open = mins >= 8 * 60 && mins < close;
+    el.textContent = open ? 'Open now' : 'Closed now';
+    el.className = 'open-status ' + (open ? 'open' : 'closed');
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
