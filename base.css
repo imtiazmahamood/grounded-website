@@ -344,3 +344,8 @@
     .nav-links a { font-size:0.72rem; letter-spacing:0.05em; }
     .hero { padding-bottom:6vh; }
   }
+  h3.menu-block { font-family:'Playfair Display',serif; font-size:2rem; color:var(--green); margin-top:3rem; }
+  h3.menu-block:first-of-type { margin-top:2.5rem; }
+  .menu-block + .menu-grid { margin-top:1rem; }
+  .menu-group h3.spacer { border-bottom-color:transparent; visibility:hidden; }
+  @media (max-width: 768px) { .menu-group h3.spacer { display:none; } }
