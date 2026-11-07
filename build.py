@@ -74,20 +74,25 @@ def item(name, desc, price):
     return f'<div class="menu-item"><div><div class="name">{name}</div>{d}</div><div class="price-pair">{p}</div></div>'
 
 
-def group(g):
+def group(g, order=0):
     title, cols, items = g
     h = f"<h3>{title}</h3>" if title else '<h3 class="spacer" aria-hidden="true">&nbsp;</h3>'
     c = f'<div class="menu-cols">{"".join(f"<span>{x}</span>" for x in cols)}</div>' if cols else ""
-    return f'<div class="menu-group">{h}{c}{"".join(item(*i) for i in items)}</div>'
+    return f'<div class="menu-group" style="order:{order}">{h}{c}{"".join(item(*i) for i in items)}</div>'
 
 
 def block(title, left, right):
     return (f'<h3 class="menu-block">{title}</h3><div class="menu-grid"><div>{left}</div><div>{right}</div></div>')
 
 
+# order = reading order on mobile (single column); left/right = desktop columns
 menu_html = (
-    block("Drinks", group(HOT_COFFEE) + group(NOT_COFFEE), group(COLD_COFFEE) + group(MILKSHAKES) + group(FREEZO) + group(EXTRAS))
-    + block("Food", group(SAVOURY_L) + group(SWEET), group(SAVOURY_R))
+    block("Drinks",
+          group(HOT_COFFEE, 1) + group(NOT_COFFEE, 3),
+          group(COLD_COFFEE, 2) + group(MILKSHAKES, 4) + group(FREEZO, 5) + group(EXTRAS, 6))
+    + block("Food",
+            group(SAVOURY_L, 1) + group(SWEET, 3),
+            group(SAVOURY_R, 2))
 )
 
 tpl = (root / "template.html").read_text()

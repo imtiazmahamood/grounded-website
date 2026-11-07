@@ -338,7 +338,8 @@
   a:focus-visible { outline:2px solid var(--gold-light); outline-offset:3px; }
   @media (prefers-reduced-motion: reduce) { html{scroll-behavior:auto;} .hero-bg{transition:none;} }
   @media (max-width: 768px) {
-    .menu-grid { grid-template-columns:1fr; gap:0; }
+    .menu-grid { display:flex; flex-direction:column; gap:0; }
+    .menu-grid > div { display:contents; }
     .hero-logo { height:100px; }
     .nav-links { gap:1.1rem; }
     .nav-links a { font-size:0.72rem; letter-spacing:0.05em; }
